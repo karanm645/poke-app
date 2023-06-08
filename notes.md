@@ -12,4 +12,3 @@
 
 3. controller logic
    1. string interpolate to find particular pokemon
-   2. 
