@@ -1,8 +1,9 @@
 class Api::V1::PokemonController < ApplicationController
   def index
     # find params 
-    pokemon = params[:pokemon]
-    @pokemon = PokeFacade.get_a_pokemon(pokemon)
+    name = params[:pokemon]
+    @pokemon = PokeFacade.get_a_pokemon(name) 
+    render json: PokemonSerializer.new(@pokemon)
     # # create connection first
     # conn = Faraday.new("https://pokeapi.co")
     # # you can call different connections

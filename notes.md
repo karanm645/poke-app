@@ -48,4 +48,23 @@
       1. good for when 10 ppl working together
 
 ## Exposing API
-1. create database to save pokemon
+1. create database to save pokemon --> make sure table is not the same name as poros
+2. validate attributes
+3. dream drive in facade
+   1. dd model method in facade and give it the argument of pokemon
+4. create the method in model
+   1. use create action to create pokemon in find_poke method
+      1. revise** actually do a find or create_by so that the database doesn't duplicate the pokemon
+5. create a test on what the json object should look like
+   1. create spec/api/v1/ get pokemon test
+   2. start with a query param
+   3. insert route with the query param
+   4. test response and hash
+   5. run test
+      1. create route in routes file
+6. Create controller --> 
+   1. find the pokemon by name using the facade method 
+   2. install serializer--> ruby fast json
+      1. rails g Serializer Pokemon name number image shiny
+         1. skips handrolling and creating a hash, turn each thing into key value pair
+   3. go back to controller and render json serializer with the facade as the argument

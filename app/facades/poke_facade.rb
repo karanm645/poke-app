@@ -6,7 +6,8 @@ class PokeFacade
       # response = conn.get("/api/v2/pokemon-form/#{pokemon}/")
       # data = JSON.parse(response.body, symbolize_names: true)
       data = PokeService.get_a_pokemon(pokemon)
-      Pocketmonster.new(data)
+      poke = Pocketmonster.new(data)
+      Pokemon.find_pokemon(poke)
     end 
   end 
 end 
