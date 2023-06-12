@@ -1,17 +1,21 @@
 <div class="result-box">
   <div align="center">
-    <h1><%= @pokemon.name %></h1>
-  </div>
+  <% if @pokemon.nil? %>
+    <%= "that is the wrong number/name" %>
+  <% else %>
+      <h1><%= @pokemon.name %></h1>
+    </div>
 
-  <p>Number:<%= @pokemon.number %></p>
-  <p><%= image_tag "#{@pokemon.image}" %><p>
+    <p>Number:<%= @pokemon.number %></p>
+    <p><%= image_tag "#{@pokemon.image}" %><p>
 
-  <%= form_tag '/api/v1/pokemon', method: :get do %>
-    <div align="center" class="poke-search">
-      <p>Search for another Pokemon:</p>
-      <%= text_field_tag :pokemon %>
-      <%= submit_tag "Search" %>
-    </div align="center"%>
+    <%= form_tag '/api/v1/pokemon', method: :get do %>
+      <div align="center" class="poke-search">
+        <p>Search for another Pokemon:</p>
+        <%= text_field_tag :pokemon %>
+        <%= submit_tag "Search" %>
+      </div align="center"%>
+      <% end %>
   <% end %>
 
 
