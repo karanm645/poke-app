@@ -68,3 +68,21 @@
       1. rails g Serializer Pokemon name number image shiny
          1. skips handrolling and creating a hash, turn each thing into key value pair
    3. go back to controller and render json serializer with the facade as the argument
+
+
+## Error handling
+- error for when user enters a number higher than the amount of pokemon
+- error for if name is incorrect 
+### followed this article: https://medium.com/rails-ember-beyond/error-handling-in-rails-the-modular-way-9afcddd2fe1b
+
+1. create file under lib/error
+2. include that file in the config/application.rb file
+
+### the easier way
+1. begin before the logic
+2. add rescue JSON::Parser error for anticipated error when user enters wrong name or number of pokemon
+3. if else statement in view template for if pokemon is nil, what error message should be sent
+
+## VCR and Webmock
+
+## Data stored into table should be changed
