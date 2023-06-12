@@ -6,7 +6,7 @@ class Api::V1::PokemonController < ApplicationController
       @pokemon = PokeFacade.get_a_pokemon(name) 
       render json: PokemonSerializer.new(@pokemon)
     rescue JSON::ParserError
-      
+      render json: { error: "invalid JSON format, check the pokemon name/number"}, status: :unprocessable_entity
     end
     #raise ErrorsController if @pokemon.nil?
     
