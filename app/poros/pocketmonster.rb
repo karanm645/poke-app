@@ -5,7 +5,7 @@ class Pocketmonster
               :shiny
 
   def initialize(data)
-    @name = data[:name].capitalize
+    @name = data[:name]
     @number = data[:id]
     @image = data[:sprites][:front_default]
     @shiny = data[:sprites][:front_shiny]
