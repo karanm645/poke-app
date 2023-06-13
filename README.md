@@ -35,7 +35,7 @@
 This is a back-end project that consumes the [Poke API](https://pokeapi.co/) and exposes all Pokemon based on their number and name. I followed a tutorial by SageOfCode that helped refresh my memory on how to [consume](https://www.youtube.com/watch?v=NXg3oE5JMm0&t=1579s) and [expose](https://www.youtube.com/watch?v=BkY1fWEFmYg&t=536s) APIs.
 
 ### Learning Goals of Project
-My main goal for this project is to create an API quickly for front-end developers to consume. I approached it by watching SageOfCode and the tips and techniques he had were phenomenal -- I highly suggest folks to check it out if you want to brush up your API spinning skills.
+My main goal for this project is to create an API quickly for front-end developers to consume. I approached it by watching [SageOfCode](https://www.youtube.com/watch?v=NXg3oE5JMm0) and the tips and techniques he had were phenomenal -- I highly suggest folks to check it out if you want to brush up your API spinning skills.
 
 ### Versions
 - Ruby 2.7.2
