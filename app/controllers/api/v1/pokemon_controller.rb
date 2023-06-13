@@ -2,7 +2,7 @@ class Api::V1::PokemonController < ApplicationController
   def index
     # find params 
     begin
-      name = params[:pokemon]
+      name = params[:pokemon].downcase
       @pokemon = PokeFacade.get_a_pokemon(name) 
       render json: PokemonSerializer.new(@pokemon)
     rescue JSON::ParserError
